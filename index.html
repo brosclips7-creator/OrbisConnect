@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <link href="https://media.base44.com/images/public/69eaa7163771d1a3a51c260d/d8487783a_logo.png" rel="icon" type="image/svg+xml"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <link href="/manifest.json" rel="manifest"/>
+  <title>
+   Orbis Connect Hub
+  </title>
+  <script crossorigin="" src="/assets/index-CQ4NvUPl.js" type="module">
+  </script>
+  <link crossorigin="" href="/assets/index-C9DnmrIX.css" rel="stylesheet"/>
+  <script type="module">
+   if (window.self === window.top) {
+  let lastPath = "";
+  function getPageNameFromPath(path) {
+    const segments = path.split("/").filter(Boolean);
+    return segments[0] || null;
+  }
+  function trackPageView() {
+    const path = window.location.pathname;
+    if (path === lastPath) return;
+    lastPath = path;
+    const pageName = getPageNameFromPath(path) || "home";
+    const appId = "69eaa7163771d1a3a51c260d";
+    if (!appId) return;
+    fetch(`/api/app-logs/${appId}/log-user-in-app/${pageName}`, {
+      method: "POST",
+    }).catch(() => {});
+  }
+  const originalPushState = history.pushState.bind(history);
+  history.pushState = function (...args) {
+    originalPushState(...args);
+    trackPageView();
+  };
+  const originalReplaceState = history.replaceState.bind(history);
+  history.replaceState = function (...args) {
+    originalReplaceState(...args);
+    trackPageView();
+  };
+  window.addEventListener("popstate", trackPageView);
+  trackPageView();
+}
+  </script>
+  <meta content="Your personalized dashboard for seamless business connections and efficient management." name="description"/>
+  <meta content="Orbis Connect Hub" property="og:title"/>
+  <meta content="Your personalized dashboard for seamless business connections and efficient management." property="og:description"/>
+  <meta content="https://media.base44.com/images/public/69eaa7163771d1a3a51c260d/d8487783a_logo.png/v1/fill/w_1200,h_630/d8487783a_logo.png" property="og:image"/>
+  <meta content="https://orbis-nexus-link.base44.app" property="og:url"/>
+  <meta content="website" property="og:type"/>
+  <meta content="Orbis Connect Hub" property="og:site_name"/>
+  <meta content="Orbis Connect Hub" name="twitter:title"/>
+  <meta content="Your personalized dashboard for seamless business connections and efficient management." name="twitter:description"/>
+  <meta content="https://media.base44.com/images/public/69eaa7163771d1a3a51c260d/d8487783a_logo.png/v1/fill/w_1200,h_630/d8487783a_logo.png" name="twitter:image"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="https://orbis-nexus-link.base44.app" name="twitter:url"/>
+  <meta content="yes" name="mobile-web-app-capable"/>
+  <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+  <meta content="Orbis Connect Hub" name="apple-mobile-web-app-title"/>
+  <link href="https://orbis-nexus-link.base44.app" rel="canonical"/>
+  <script data-seo-source="builder" type="application/ld+json">
+   {"name": "Orbis Connect Hub", "@context": "https://schema.org", "@type": "WebSite", "url": "https://orbis-nexus-link.base44.app"}
+  </script>
+  <script data-seo-source="builder" type="application/ld+json">
+   {"name": "Orbis Connect Hub", "logo": "https://media.base44.com/images/public/69eaa7163771d1a3a51c260d/d8487783a_logo.png", "@context": "https://schema.org", "@type": "Organization", "url": "https://orbis-nexus-link.base44.app"}
+  </script>
+  <script async="true" data-app-id="69eaa7163771d1a3a51c260d" data-platform-url="https://app.base44.com" src="/static/js/badge.js">
+  </script>
+ </head>
+ <body>
+  <div id="root">
+   <div data-seo-source="builder" id="seo-snapshot" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">
+    <h1>
+     Orbis Connect Hub
+    </h1>
+    <p>
+     Your personalized dashboard for seamless business connections and efficient management.
+    </p>
+    <nav aria-label="Pages">
+     <h2>
+      Pages
+     </h2>
+     <ul>
+      <li>
+       <a href="/dev-dashboard">
+        Dev Dashboard
+       </a>
+      </li>
+      <li>
+       <a href="/owner">
+        Owner Dashboard
+       </a>
+      </li>
+      <li>
+       <a href="/owner-signout">
+        Owner Signout
+       </a>
+      </li>
+      <li>
+       <a href="/pending">
+        Pending
+       </a>
+      </li>
+      <li>
+       <a href="/register">
+        Register
+       </a>
+      </li>
+      <li>
+       <a href="/owner-login">
+        Owner Login
+       </a>
+      </li>
+     </ul>
+    </nav>
+   </div>
+  </div>
+ </body>
+</html>
